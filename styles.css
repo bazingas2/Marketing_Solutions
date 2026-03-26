@@ -527,15 +527,7 @@ ul {
   padding: 30px;
 }
 
-/* Ajeitando layout para 5 itens (3 em cima, 2 centralizados embaixo) */
-.services-grid .service-card:nth-child(4) {
-  grid-column: 1 / 2;
-  transform: translateX(50%);
-}
-.services-grid .service-card:nth-child(5) {
-  grid-column: 2 / 3;
-  transform: translateX(50%);
-}
+/* Layout automático para 6 itens (3 em cada linha) */
 
 .service-icon {
   width: 60px;
@@ -758,12 +750,7 @@ ul {
   .image-placeholder { min-height: 300px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   
-  .services-grid .service-card:nth-child(4) {
-    grid-column: auto; transform: none;
-  }
-  .services-grid .service-card:nth-child(5) {
-    grid-column: auto; transform: none;
-  }
+  /* nth-child overrides removed para suportar 6 itens fluidos */
   
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
